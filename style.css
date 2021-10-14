@@ -242,7 +242,11 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-    .overlay, .delete-cofc{
+    .overlay{
+        margin:auto auto;
+        width: 80vw;
+    }
+    .delete-cofc{
         margin: 35% auto auto auto;
         width: 80vw;
     }
