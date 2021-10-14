@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: lightblue;
+    position: relative;
+}
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 6% auto 0% auto;
+    background: rgba(35, 119, 42, 0.37);
+}
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2rem;
+    text-align: center;
+    background: rgb(71, 177, 136);
+}
+.addSection {
+    background: rgb(34, 109, 109);
+    border-radius: 5px 5px 0 0;
+    min-height: 7rem;
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.addedItems {
+    margin: 2rem auto auto auto;
+    /* min-height: 10rem; */
+    width: 60vw;
+    border-radius: 10px;
+}
+.movie {
+    background: whitesmoke;
+    margin: 1rem auto;
+    min-height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.movie > div {
+    padding-right: 1rem;
+    align-self: center;
+}
+.img-div {
+    border-radius: 10px;
+    width: 12rem;
+    height: 100%;
+    grid-area: img-div;
+}
+.movie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.name-div,
+.rating-div {
+    font-size: min(1.1rem, 1.5rem);
+}
+.item {
+    cursor: pointer;
+    background: white;
+    min-height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0.5px 0.5px 5px black;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.item > p {
+    padding: 10px;
+}
+.item:hover {
+    box-shadow: 1px 1px 5px rgb(64, 111, 143) inset;
+    /* transform: scaleX(1.1); */
+}
+
+input {
+    margin: 0.5rem 0;
+    outline: none;
+    border: 0px;
+    border-bottom: 3px solid rgb(55, 64, 92);
+    height: 2rem;
+    padding-left: 0.5rem;
+    background: rgb(34, 109, 109);
+    font-size: 1rem;
+}
+input::-webkit-inner-spin-button,                 /* removing number increaser ((chrome)) */
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"] {
+    /* removing number increaser ((mozilla)) */
+    -moz-appearance: textfield;
+}
+input::placeholder {
+    color: rgb(230, 222, 222);
+}
+button {
+    margin: 0.5rem 0;
+    width: 9rem;
+    margin-left: 1.4rem;
+    background: rgb(71, 177, 136);
+    outline: none;
+    border: 0px;
+    height: 1.8rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+button:hover {
+    box-shadow: 1px 2px 2px rgb(2, 66, 66);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgb(87, 9, 9); */
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(9, 78, 105);
+    height: 1rem;
+    border-radius: 10px;
+    /* display: none; */
+}
+
+/*-------------------------------------------------*/
+
+.backdrop {
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.308);
+    position: absolute;
+}
+.generalFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    transition: all 0.5s ease-in-out;
+    background: rgb(34, 109, 109);
+    margin: auto auto;
+    width: 50%;
+    min-height: 17rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgb(71, 177, 136);
+}
+.overlay-wrapper {
+    width: 80%;
+    margin: auto auto;
+}
+.overlay-content:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto auto;
+}
+.cancel-head,
+.head {
+    background: rgb(71, 177, 136);
+    min-height: 2.2rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.del img {
+    height: 2.6rem;
+    cursor: pointer;
+}
+.delete-cofc {
+    position: absolute;
+    width: 24rem;
+    height: 8rem;
+    margin: 10% auto auto auto;
+    background: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.btns {
+    padding: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 75%;
+}
+.btn-del,
+.btn-nodel {
+    background: rgba(255, 0, 0, 0.74);
+    color: white;
+    width: 5rem;
+    padding: 0.3rem;
+    border-radius: 10px;
+    text-align: center;
+}
+.btn-nodel {
+    background: rgb(12, 116, 126);
+}
+.invisible {
+    display: none;
+}
+.visible {
+    inset: 20% 10% auto 10%;
+    position: absolute;
+    display: block;
+    z-index: 100;
+}
+
+@media (max-width: 600px) {
+    .overlay {
+        inset: 20% 5% 60% 5%;
+        margin: auto auto;
+        width: 80vw;
+    }
+    .addedItems {
+        width: 90%;
+    }
+    .movie {
+        border-radius: 10px;
+    }
+}

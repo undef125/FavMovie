@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <div class="first">
+            <div class="addSection">
+                <button class="Add">Add Movie</button>
+            </div>
+        </div>
+        <div id="backd"></div>
+        <div id="backd2"></div>
+        <div class="overlay invisible" id="overl">
+            <div class="head generalFlex"><p>Add Movie Of Your Choice</p></div>
+            <div class="overlay-wrapper">
+                <div class="overlay-content">
+                    <input type="text" placeholder="Movie Name" />
+                    <input
+                        type="number"
+                        placeholder="Rating"
+                        min="0"
+                        max="10"
+                    />
+                    <input type="text" placeholder="Image URL" />
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="add-final">Add</button>
+                <button class="cancel">Cancel</button>
+            </div>
+        </div>
+
+        <div class="addedItems">
+            <ul class="movieListParent">
+                <li class="movie">
+                    <div class="img-div">
+                        <img
+                            src="https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/44734/article_full%401x.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="name-div">Stranger Things</div>
+                    <div class="rating-div">8.8</div>
+                    <div class="del">
+                        <img
+                            src="img/delete.png"
+                            alt="delete-icon"
+                            class="del-icon"
+                        />
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="delete-cofc invisible">
+            <div class="cancel-head">Are you sure you want to delete?</div>
+            <div class="btns">
+                <div class="btn-del">Yes</div>
+                <div class="btn-nodel">No</div>
+            </div>
+        </div>
+    </body>
+</html>
