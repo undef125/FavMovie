@@ -242,8 +242,8 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-    .overlay{
-        margin: auto auto;
+    .overlay, .delete-cofc{
+        margin: 35% auto auto auto;
         width: 80vw;
     }
     .addedItems {
@@ -251,9 +251,5 @@ button:hover {
     }
     .movie {
         border-radius: 10px;
-    }
-    .delete-cofc{
-        margin: 35% auto auto auto;
-        width: 80vw;
     }
 }
